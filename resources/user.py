@@ -24,7 +24,7 @@ class UserRegister(Resource):
         # sign_up = UserModel(None,data['username'],data['password'])
         # response = sign_up.insert_user()
         return {"aasas":"response"}
-}
+
 
 
 
