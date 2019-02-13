@@ -14,16 +14,15 @@ app.secret_key = 'jose'
 api = Api(app)
 jwt = JWT(app,authenticate,identity)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 api.add_resource(Item,'/item/<string:name>')
 api.add_resource(ItemList,'/items')
 api.add_resource(UserRegister,'/signup')
 
 if __name__ == '__main__':
-    from flask_sqlalchemy import  SQLAlchemy
-    db = SQLAlchemy()
-    db.init_app(app)
+    # from db import db
+    # db.init_app(app)
     app.run(port=5000,debug=True)
