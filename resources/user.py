@@ -21,10 +21,10 @@ class UserRegister(Resource):
 
     def post(self):
         data = UserRegister.parser.parse_args()
-        sign_up = UserModel(None,data['username'],data['password'])
-        response = sign_up.insert_user()
-        return response
-
+        # sign_up = UserModel(None,data['username'],data['password'])
+        # response = sign_up.insert_user()
+        return {"aasas":"response"}
+}
 
 
 
